@@ -4,8 +4,8 @@ from django.shortcuts import render
 
 
 #تکمیل پروفایل
-class View
-pass
+class View():
+    pass
 
 
 #تغییر پروفایل
