@@ -50,9 +50,6 @@ class CustomerRegisterView(APIView):
         
         return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
     
-class VendorRegisterView(APIView):
-
-    pass
 
 
 

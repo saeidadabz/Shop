@@ -12,7 +12,7 @@ class Vendor(models.Model):
     store_name=models.CharField(max_length=40,null=True,blank=False)
     business_license=models.FileField()
     is_verified=models.BooleanField(default=False)
-    id_number=models.BigIntegerField(max_length=11 null=true)
+    id_number=models.IntegerField( null=True)
     longitude=models.FloatField(null=True , blank=True)
     latitude=models.FloatField(null=True , blank=True)
 
