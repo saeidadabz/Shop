@@ -12,7 +12,8 @@ class CustomerRegisterSerializer(serializers.ModelSerializer):
             model=User
             fields=['email','mobile','password','token','role']
             extra_kwargs={
-                 'mobile':{'required':True}
+                 'mobile':{'required':True},
+                 'role':{'read_only':True}
             }
         
 

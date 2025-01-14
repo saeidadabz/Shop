@@ -37,3 +37,10 @@ class VendorRegisterSerializer(serializers.ModelSerializer):
             )
 
             return user
+        
+#use when Retrieve a shop (we want to see detail of shop owner)
+class VendorSerializer(serializers.ModelSerializer):
+     class Meta:
+          model=User
+          fields=['email','mobile','role']
+          
