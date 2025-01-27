@@ -6,6 +6,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView,TokenRefreshView,
 
 
 urlpatterns=[
+    #behtar nis bezarim hamun 'register/' ?
     path('customer/register/',CustomerRegisterView.as_view()),
     # path('VendorRegister'),
     # path('DriverRegister'),
