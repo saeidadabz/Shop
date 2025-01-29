@@ -5,7 +5,7 @@ from users.models import User
 
 
 
-class Shop(models.Model):
+class Store(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
     store_address=models.TextField(max_length=300,null=True,blank=False)
     store_phone=models.CharField(max_length=15)

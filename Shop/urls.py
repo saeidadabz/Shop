@@ -24,7 +24,7 @@ urlpatterns = [
 
     path('',include('users.urls')),
     path('',include('vendors.urls')),
-    path('',include('shops.urls')),
+    path('',include('stores.urls')),
 
   
     # YOUR PATTERNS

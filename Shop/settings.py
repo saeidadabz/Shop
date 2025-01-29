@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'users',
     'vendors',
-    'shops',
+    'stores',
     'rest_framework_simplejwt',
     'drf_spectacular',
 ]

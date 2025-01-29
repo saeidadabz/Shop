@@ -1,7 +1,7 @@
 
 
 from rest_framework import serializers
-from .models import Shop
+from .models import Store
 from drf_spectacular.utils import extend_schema_field
 
 # from users.serializer import CustomerRegisterSerializer
@@ -10,11 +10,13 @@ from vendors.serializer import VendorSerializer
 from Shop import settings
 
 
-class ShopCreateSerializer(serializers.ModelSerializer):
+class StoreCreateSerializer(serializers.ModelSerializer):
 
+    
 
         class Meta:
-            model=Shop
+            model=Store
+
             fields=['store_name','store_address','longitude']
             extra_kwargs={
                  'store_address':{'required':True}
@@ -28,19 +30,19 @@ class ShopCreateSerializer(serializers.ModelSerializer):
         #     validated_data['user'] = user  # اختصاص کاربر به فروشگاه
         #     return super().create(validated_data)
 
-class ShopRetrieveSerializer(serializers.ModelSerializer):
+class StoreRetrieveSerializer(serializers.ModelSerializer):
 
         user=VendorSerializer()
 
         class Meta:
-            model=Shop
-            fields=['store_name','store_address','longitude','user']
+            model=Store
+            fields=['id','store_name','store_address','longitude','user']
 
-class ShopUpdateSerializer(serializers.ModelSerializer):
+class StoreUpdateSerializer(serializers.ModelSerializer):
       
       class Meta:
-            model=Shop
-            fields=['store_name','store_address','longitude']
+            model=Store
+            fields=['id','store_name','store_address','longitude']
 
             
         
